@@ -1,0 +1,52 @@
+
+package net.mcreator.arcania.item;
+
+import net.minecraftforge.registries.ObjectHolder;
+
+import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.item.SwordItem;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.Item;
+import net.minecraft.item.IItemTier;
+
+import net.mcreator.arcania.ArcaniaElements;
+
+@ArcaniaElements.ModElement.Tag
+public class ArcaniumSwordItem extends ArcaniaElements.ModElement {
+	@ObjectHolder("arcania:arcaniumsword")
+	public static final Item block = null;
+	public ArcaniumSwordItem(ArcaniaElements instance) {
+		super(instance, 2);
+	}
+
+	@Override
+	public void initElements() {
+		elements.items.add(() -> new SwordItem(new IItemTier() {
+			public int getMaxUses() {
+				return 982;
+			}
+
+			public float getEfficiency() {
+				return 4f;
+			}
+
+			public float getAttackDamage() {
+				return 8f;
+			}
+
+			public int getHarvestLevel() {
+				return 1;
+			}
+
+			public int getEnchantability() {
+				return 5;
+			}
+
+			public Ingredient getRepairMaterial() {
+				return Ingredient.fromStacks(new ItemStack(ArcaniumIngotItem.block, (int) (1)));
+			}
+		}, 3, -4f, new Item.Properties().group(ItemGroup.COMBAT)) {
+		}.setRegistryName("arcaniumsword"));
+	}
+}
