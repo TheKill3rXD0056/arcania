@@ -46,7 +46,7 @@ public class ArcaniumSwordItem extends ArcaniaElements.ModElement {
 			public Ingredient getRepairMaterial() {
 				return Ingredient.fromStacks(new ItemStack(ArcaniumIngotItem.block, (int) (1)));
 			}
-		}, 3, -4f, new Item.Properties().group(ItemGroup.COMBAT)) {
+		}, 3, -2f, new Item.Properties().group(ItemGroup.COMBAT)) {
 		}.setRegistryName("arcaniumsword"));
 	}
 }
