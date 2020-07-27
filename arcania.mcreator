@@ -16,6 +16,14 @@
       "compiles": true,
       "locked_code": false,
       "ids": {}
+    },
+    {
+      "name": "ArcaniumPickaxe",
+      "type": "tool",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
     }
   ],
   "variable_elements": [],
@@ -23,7 +31,8 @@
   "language_map": {
     "en_us": {
       "item.arcania.arcaniumingot": "Arcanium Ingot",
-      "item.arcania.arcaniumsword": "Arcanium Sword"
+      "item.arcania.arcaniumsword": "Arcanium Sword",
+      "item.arcania.arcaniumpickaxe": "Arcanium Pickaxe"
     }
   },
   "workspaceSettings": {
